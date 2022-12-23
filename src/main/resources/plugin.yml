@@ -1,0 +1,14 @@
+name: KumaDice
+version: '${version}'
+main: kumajunk.kumadice.KumaDice
+api-version: 1.17
+authors: [ Kuma_junk ]
+
+commands:
+  kdice:
+
+permissions:
+  kdice.player:
+    default: true
+  kdice.op:
+    default: op
