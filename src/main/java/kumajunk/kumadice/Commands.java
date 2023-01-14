@@ -131,6 +131,9 @@ public class Commands implements CommandExecutor, TabCompleter {
                         sender.sendMessage(pluginTitle + "§c§lサイコロの個数は1以上の整数にしてください!");
                         return true;
                     }
+                    if (args[1].length() < 3) {
+                        sender.sendMessage(pluginTitle + "§c§lサイコロの個数は100未満の整数にしてください!");
+                    }
                     for (Player player : Bukkit.getOnlinePlayers()) {
                         player.sendMessage("§k§k§k" + pluginTitle + sender.getName() + "§7§lが" + numberOfDice + "個サイコロを振りました...§k§k§k");
                     }
