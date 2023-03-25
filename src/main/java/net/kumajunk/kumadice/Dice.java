@@ -1,11 +1,11 @@
-package kumajunk.kumadice;
+package net.kumajunk.kumadice;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
 import java.util.Random;
 
-import static kumajunk.kumadice.KumaDice.*;
+import static net.kumajunk.kumadice.KumaDice.*;
 
 public class Dice extends Thread {
     @Override

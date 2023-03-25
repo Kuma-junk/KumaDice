@@ -1,11 +1,12 @@
 name: KumaDice
-version: '${version}'
-main: kumajunk.kumadice.KumaDice
-api-version: 1.17
-authors: [ Kuma_junk ]
+version: '${project.version}'
+main: net.kumajunk.kumadice.KumaDice
+api-version: 1.19
 
 commands:
   kdice:
+    description: diceroll
+    usage: /kdice でhelpを確認
 
 permissions:
   kdice.player:

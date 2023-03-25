@@ -1,4 +1,4 @@
-package kumajunk.kumadice;
+package net.kumajunk.kumadice;
 
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandExecutor;
@@ -10,7 +10,7 @@ import java.util.Collections;
 import java.util.List;
 
 import static java.lang.Integer.parseInt;
-import static kumajunk.kumadice.KumaDice.*;
+import static net.kumajunk.kumadice.KumaDice.*;
 
 public class Commands implements CommandExecutor, TabCompleter {
     @Override
@@ -127,12 +127,12 @@ public class Commands implements CommandExecutor, TabCompleter {
                         sender.sendMessage(pluginTitle + "§c§lサイコロの個数は1以上の整数にしてください!");
                     }
                     int numberOfDice = parseInt(args[1]);
-                    if (numberOfDice <= 1) {
-                        sender.sendMessage(pluginTitle + "§c§lサイコロの個数は1以上の整数にしてください!");
+                    if (numberOfDice < 1) {
+                        sender.sendMessage(pluginTitle + "§c§lサイコロの個数は1以上" + maxDice + "以下の整数にしてください!");
                         return true;
                     }
-                    if (args[1].length() < 3) {
-                        sender.sendMessage(pluginTitle + "§c§lサイコロの個数は100未満の整数にしてください!");
+                    if (numberOfDice > maxDice) {
+                        sender.sendMessage(pluginTitle + "§c§lサイコロの個数は" + maxDice + "以下の整数にしてください!");
                         return true;
                     }
                     for (Player player : Bukkit.getOnlinePlayers()) {

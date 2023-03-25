@@ -1,5 +1,4 @@
 # User-specific stuff
-*.iml
 *.ipr
 *.iws
 
@@ -116,3 +115,5 @@ run/
 !gradle-wrapper.jar
 
 target/
+
+.idea/

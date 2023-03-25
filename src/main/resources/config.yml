@@ -1,1 +1,2 @@
-OnDice = true
+OnDice: on
+MaxDice: 100
